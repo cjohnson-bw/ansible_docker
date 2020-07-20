@@ -5,6 +5,10 @@ This allows you to run Ansible in a container with specific versions of Python a
 - The Python version can be changed in the Dockerfile
 - The Ansible version can be changed in the requirements.txt file
 
+#### Requirements:
+- Docker 17.09.0+
+- Docker Compose
+
 #### Usage:
 ```
 # Build, start and attach to the container:
