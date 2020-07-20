@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+  ansible_docker:
+    container_name: ansible_docker
+    image: ansible_docker:latest
+    build:
+      context: .
+      network: host
+      args:
+        uid: $UID
+        gid: $GID
+        user: $USER  
+    user: $UID:$GID
+    working_dir: $HOME
+    volumes:
+      - $HOME:$HOME:rw
+    network_mode: "host"
+    tty: true
+    stdin_open: true
